@@ -32,7 +32,7 @@ export const CategoriaEdit = (props) => (
 export const CategoriaCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <TextInput source="nombre" />
+      <TextInput source="Nombre" />
     </SimpleForm>
   </Create>
 );

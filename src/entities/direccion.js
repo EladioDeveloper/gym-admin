@@ -39,10 +39,10 @@ export const DireccionEdit = (props) => (
 export const DireccionCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <ReferenceField source="idSector" reference="sector">
+      <ReferenceField source="IDSector" reference="sector">
         <TextField source="nombre" />
       </ReferenceField>
-      <TextField source="direccion" />
+      <TextField source="Dir" label="Direccion" />
     </SimpleForm>
   </Create>
 );

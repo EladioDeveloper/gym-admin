@@ -32,7 +32,7 @@ export const DiaEdit = (props) => (
 export const DiaCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <TextInput source="nombre" />
+      <TextInput source="Nombre" />
     </SimpleForm>
   </Create>
 );

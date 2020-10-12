@@ -18,8 +18,8 @@ export const DiasRutinaList = (props) => (
   <List {...props}>
     <Datagrid rowClick="edit">
       <TextField source="id" />
-      <ReferenceField source="idRutina" reference="rutina" label="ID de Rutina">
-        <NumberField source="nombre" />
+      <ReferenceField source="idRutina" reference="rutina" label="Rutina">
+        <TextField source="nombre" />
       </ReferenceField>
       <ReferenceField source="idDia" reference="dia" label="Día">
         <NumberField source="nombre" />
@@ -60,17 +60,17 @@ export const DiasRutinaEdit = (props) => (
 export const DiasRutinaCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <ReferenceInput source="idRutina" reference="rutina">
+      <ReferenceInput source="IDRutina" reference="rutina">
         <NumberInput source="id" />
       </ReferenceInput>
-      <ReferenceInput source="idDia" reference="dia">
+      <ReferenceInput source="IDDia" reference="dia">
         <NumberInput source="id" />
       </ReferenceInput>
-      <ReferenceInput source="idEjercicio" reference="ejerciciorutina">
+      <ReferenceInput source="IDEjercicio" reference="ejerciciorutina">
         <NumberInput source="id" />
       </ReferenceInput>
-      <NumberInput source="repeticiones" />
-      <NumberInput source="series" />
+      <NumberInput source="Repeticiones" />
+      <NumberInput source="Series" />
     </SimpleForm>
   </Create>
 );

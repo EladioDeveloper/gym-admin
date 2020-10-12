@@ -33,7 +33,7 @@ export const RutinaEdit = (props) => (
 export const RutinaCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <TextInput source="nombre" />
+      <TextInput source="Nombre" />
     </SimpleForm>
   </Create>
 );

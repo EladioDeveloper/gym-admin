@@ -32,7 +32,7 @@ export const MesEdit = (props) => (
 export const MesCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <TextInput source="nombre" />
+      <TextInput source="Nombre" />
     </SimpleForm>
   </Create>
 );

@@ -44,10 +44,10 @@ export const EjercicioRutinaEdit = (props) => (
 export const EjercicioRutinaCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <ReferenceInput source="idCategoria" reference="categoria">
+      <ReferenceInput source="IDCategoria" reference="categoria">
         <TextInput source="nombre" />
       </ReferenceInput>
-      <TextInput source="nombre" />
+      <TextInput source="Nombre" />
     </SimpleForm>
   </Create>
 );

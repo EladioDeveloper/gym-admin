@@ -8,6 +8,7 @@ import {
   SimpleForm,
   TextInput,
   Create,
+  RadioButtonGroupInput,
 } from "react-admin";
 
 export const PlanMembresiaList = (props) => (
@@ -32,7 +33,13 @@ export const PlanMembresiaEdit = (props) => (
       <TextInput source="descripcion" />
       <TextInput source="tiempoValidez" />
       <TextInput source="monto" />
-      <TextInput source="estado" />
+      <RadioButtonGroupInput
+        source="estado"
+        choices={[
+          { id: 1, name: "Si" },
+          { id: 0, name: "No" },
+        ]}
+      />
     </SimpleForm>
   </Edit>
 );
@@ -40,11 +47,17 @@ export const PlanMembresiaEdit = (props) => (
 export const PlanMembresiaCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <TextInput source="nombre" />
-      <TextInput source="descripcion" />
-      <TextInput source="tiempoValidez" />
-      <TextInput source="monto" />
-      <TextInput source="estado" />
+      <TextInput source="Nombre" />
+      <TextInput source="Descripcion" />
+      <TextInput source="TiempoValidez" />
+      <TextInput source="Monto" />
+      <RadioButtonGroupInput
+        source="Estado"
+        choices={[
+          { id: 1, name: "Si" },
+          { id: 0, name: "No" },
+        ]}
+      />
     </SimpleForm>
   </Create>
 );

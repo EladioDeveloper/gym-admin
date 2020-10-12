@@ -32,7 +32,7 @@ export const ProvinciaEdit = (props) => (
 export const ProvinciaCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <TextInput source="nombre" />
+      <TextInput source="Nombre" />
     </SimpleForm>
   </Create>
 );

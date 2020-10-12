@@ -41,10 +41,10 @@ export const CiudadEdit = (props) => (
 export const CiudadCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <ReferenceInput source="idProvincia" reference="provincia">
+      <ReferenceInput source="IDProvincia" reference="provincia">
         <SelectInput optionText="id" />
       </ReferenceInput>
-      <TextInput source="nombre" />
+      <TextInput source="Nombre" />
     </SimpleForm>
   </Create>
 );
