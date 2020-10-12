@@ -1,50 +1,51 @@
 import * as React from "react";
 import {
   List,
+  Edit,
   Datagrid,
   TextField,
-  ReferenceField,
-  Edit,
+  EditButton,
   SimpleForm,
   TextInput,
+  ReferenceField,
   ReferenceInput,
   SelectInput,
   Create,
 } from "react-admin";
 
-export const PostList = (props) => (
+export const SectorList = (props) => (
   <List {...props}>
     <Datagrid rowClick="edit">
       <TextField source="id" />
-      <ReferenceField source="userId" reference="users">
-        <TextField source="name" />
+      <ReferenceField source="idCiudad" reference="ciudad">
+        <TextField source="nombre" />
       </ReferenceField>
-      <TextField source="title" />
+      <TextField source="nombre" />
+      <EditButton />
     </Datagrid>
   </List>
 );
 
-export const PostEdit = (props) => (
+export const SectorEdit = (props) => (
   <Edit {...props}>
     <SimpleForm>
       <TextInput disabled source="id" />
-      <ReferenceInput source="userId" reference="users">
+      <ReferenceInput source="idCiudad" reference="ciudad">
         <SelectInput optionText="name" />
       </ReferenceInput>
-      <TextInput source="title" />
-      <TextInput multiline source="body" />
+      <TextInput source="nombre" />
     </SimpleForm>
   </Edit>
 );
 
-export const PostCreate = (props) => (
+export const SectorCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <ReferenceInput source="userId" reference="users">
+      <TextInput disabled source="id" />
+      <ReferenceInput source="idCiudad" reference="ciudad">
         <SelectInput optionText="name" />
       </ReferenceInput>
-      <TextInput source="title" />
-      <TextInput multiline source="body" />
+      <TextInput source="nombre" />
     </SimpleForm>
   </Create>
 );
