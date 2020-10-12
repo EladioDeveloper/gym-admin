@@ -16,8 +16,8 @@ export const InscripcionList = (props) => (
   <List {...props}>
     <Datagrid rowClick="edit">
       <TextField source="id" />
-      <ReferenceField source="idPlan" reference="plan">
-        <TextField source="nombre" />
+      <ReferenceField source="idPlan" reference="planmembresia">
+        <TextField source="id" />
       </ReferenceField>
       <TextField source="fPago" />
       <TextField source="autoRenovacion" />
@@ -30,8 +30,8 @@ export const InscripcionEdit = (props) => (
   <Edit {...props}>
     <SimpleForm>
       <TextInput disabled source="id" />
-      <ReferenceInput source="idPlan" reference="plan">
-        <TextField source="nombre" />
+      <ReferenceInput source="idPlan" reference="planmembresia">
+        <TextField source="id" />
       </ReferenceInput>
       <TextInput source="direccion" />
       <TextInput source="fPago" />

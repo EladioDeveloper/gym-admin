@@ -18,14 +18,18 @@ export const DiasRutinaList = (props) => (
   <List {...props}>
     <Datagrid rowClick="edit">
       <TextField source="id" />
-      <ReferenceField source="idRutina" reference="rutina">
-        <TextField source="nombre" />
+      <ReferenceField source="idRutina" reference="rutina" label="ID de Rutina">
+        <NumberField source="nombre" />
       </ReferenceField>
-      <ReferenceField source="idDia" reference="dia">
-        <TextField source="nombre" />
+      <ReferenceField source="idDia" reference="dia" label="Día">
+        <NumberField source="nombre" />
       </ReferenceField>
-      <ReferenceField source="idEjercicio" reference="ejercicio">
-        <TextField source="nombre" />
+      <ReferenceField
+        source="idEjercicio"
+        reference="ejerciciorutina"
+        label="Ejercicio"
+      >
+        <NumberField source="nombre" />
       </ReferenceField>
       <NumberField source="repeticiones" />
       <NumberField source="series" />
@@ -39,13 +43,13 @@ export const DiasRutinaEdit = (props) => (
     <SimpleForm>
       <TextInput disabled source="id" />
       <ReferenceInput source="idRutina" reference="rutina">
-        <TextInput source="nombre" />
+        <NumberInput source="id" />
       </ReferenceInput>
       <ReferenceInput source="idDia" reference="dia">
-        <TextInput source="nombre" />
+        <NumberInput source="id" />
       </ReferenceInput>
-      <ReferenceInput source="idEjercicio" reference="ejercicio">
-        <TextField source="nombre" />
+      <ReferenceInput source="idEjercicio" reference="ejerciciorutina">
+        <NumberInput source="id" />
       </ReferenceInput>
       <NumberInput source="repeticiones" />
       <NumberInput source="series" />
@@ -57,13 +61,13 @@ export const DiasRutinaCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
       <ReferenceInput source="idRutina" reference="rutina">
-        <TextInput source="nombre" />
+        <NumberInput source="id" />
       </ReferenceInput>
       <ReferenceInput source="idDia" reference="dia">
-        <TextInput source="nombre" />
+        <NumberInput source="id" />
       </ReferenceInput>
-      <ReferenceInput source="idEjercicio" reference="ejercicio">
-        <TextField source="nombre" />
+      <ReferenceInput source="idEjercicio" reference="ejerciciorutina">
+        <NumberInput source="id" />
       </ReferenceInput>
       <NumberInput source="repeticiones" />
       <NumberInput source="series" />

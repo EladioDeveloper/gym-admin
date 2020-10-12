@@ -7,13 +7,14 @@ import {
   EditButton,
   SimpleForm,
   TextInput,
+  NumberField,
   Create,
 } from "react-admin";
 
 export const RutinaList = (props) => (
   <List {...props}>
     <Datagrid rowClick="edit">
-      <TextField source="id" />
+      <NumberField source="id" />
       <TextField source="nombre" />
       <EditButton />
     </Datagrid>
@@ -23,7 +24,7 @@ export const RutinaList = (props) => (
 export const RutinaEdit = (props) => (
   <Edit {...props}>
     <SimpleForm>
-      <TextInput disabled source="id" />
+      <NumberField disabled source="id" />
       <TextInput source="nombre" />
     </SimpleForm>
   </Edit>
@@ -32,7 +33,6 @@ export const RutinaEdit = (props) => (
 export const RutinaCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <TextInput disabled source="id" />
       <TextInput source="nombre" />
     </SimpleForm>
   </Create>

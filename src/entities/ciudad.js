@@ -18,7 +18,7 @@ export const CiudadList = (props) => (
     <Datagrid rowClick="edit">
       <TextField source="id" />
       <ReferenceField source="idProvincia" reference="provincia">
-        <TextField source="nombre" />
+        <TextField source="id" />
       </ReferenceField>
       <TextField source="nombre" />
       <EditButton />
@@ -31,7 +31,7 @@ export const CiudadEdit = (props) => (
     <SimpleForm>
       <TextInput disabled source="id" />
       <ReferenceInput source="idProvincia" reference="provincia">
-        <SelectInput optionText="name" />
+        <SelectInput optionText="id" />
       </ReferenceInput>
       <TextInput source="nombre" />
     </SimpleForm>
@@ -42,7 +42,7 @@ export const CiudadCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
       <ReferenceInput source="idProvincia" reference="provincia">
-        <SelectInput optionText="name" />
+        <SelectInput optionText="id" />
       </ReferenceInput>
       <TextInput source="nombre" />
     </SimpleForm>

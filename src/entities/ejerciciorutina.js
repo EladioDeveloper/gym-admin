@@ -16,7 +16,11 @@ export const EjercicioRutinaList = (props) => (
   <List {...props}>
     <Datagrid rowClick="edit">
       <TextField source="id" />
-      <ReferenceField source="idCategoria" reference="categoria">
+      <ReferenceField
+        source="id"
+        reference="categoria"
+        label="Categoría de ejercicio"
+      >
         <TextField source="nombre" />
       </ReferenceField>
       <TextField source="nombre" />

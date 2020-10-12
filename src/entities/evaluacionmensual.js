@@ -8,6 +8,7 @@ import {
   SimpleForm,
   TextInput,
   ReferenceField,
+  SelectInput,
   NumberField,
   ReferenceInput,
   NumberInput,
@@ -18,11 +19,11 @@ export const EvaluacionMensualList = (props) => (
   <List {...props}>
     <Datagrid rowClick="edit">
       <TextField source="id" />
-      <ReferenceField source="idCliente" reference="cliente">
-        <TextField source="nombre" />
+      <ReferenceField source="cliente" reference="cliente">
+        <TextField optionText="nombre" />
       </ReferenceField>
-      <ReferenceField source="idMes" reference="mes">
-        <TextField source="nombre" />
+      <ReferenceField source="mes" reference="mes">
+        <TextField optionText="nombre" />
       </ReferenceField>
       <TextField source="calorias" />
       <NumberField source="altura" />
@@ -38,11 +39,11 @@ export const EvaluacionMensualEdit = (props) => (
   <Edit {...props}>
     <SimpleForm>
       <TextInput disabled source="id" />
-      <ReferenceInput source="idCliente" reference="cliente">
-        <TextInput source="nombre" />
+      <ReferenceInput source="cliente" reference="cliente">
+        <SelectInput optionText="nombre" />
       </ReferenceInput>
-      <ReferenceInput source="idMes" reference="mes">
-        <TextInput source="nombre" />
+      <ReferenceInput source="mes" reference="mes">
+        <SelectInput optionText="nombre" />
       </ReferenceInput>
       <TextInput source="calorias" />
       <NumberInput source="altura" />
@@ -56,11 +57,11 @@ export const EvaluacionMensualEdit = (props) => (
 export const EvaluacionMensualCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <ReferenceInput source="idCliente" reference="cliente">
-        <TextInput source="nombre" />
+      <ReferenceInput source="cliente" reference="cliente">
+        <SelectInput optionText="nombre" />
       </ReferenceInput>
-      <ReferenceInput source="idMes" reference="mes">
-        <TextInput source="nombre" />
+      <ReferenceInput source="mes" reference="mes">
+        <SelectInput optionText="nombre" />
       </ReferenceInput>
       <TextInput source="calorias" />
       <NumberInput source="altura" />

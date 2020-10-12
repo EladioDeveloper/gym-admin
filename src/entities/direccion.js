@@ -15,10 +15,10 @@ export const DireccionList = (props) => (
   <List {...props}>
     <Datagrid rowClick="edit">
       <TextField source="id" />
-      <ReferenceField source="idSector" reference="sector">
+      <ReferenceField source="idSector" reference="sector" label="Sector">
         <TextField source="nombre" />
       </ReferenceField>
-      <TextField source="direccion" />
+      <TextField source="dir" />
       <EditButton />
     </Datagrid>
   </List>
