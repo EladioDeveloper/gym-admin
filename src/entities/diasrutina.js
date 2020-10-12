@@ -5,11 +5,13 @@ import {
   Datagrid,
   TextField,
   EditButton,
+  Filter,
   SimpleForm,
   TextInput,
   ReferenceField,
   NumberField,
   ReferenceInput,
+  SelectInput,
   NumberInput,
   Create,
 } from "react-admin";
@@ -60,17 +62,30 @@ export const DiasRutinaEdit = (props) => (
 export const DiasRutinaCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <ReferenceInput source="IDRutina" reference="rutina">
-        <NumberInput source="id" />
+      <ReferenceInput source="IDRutina" reference="rutina" label="Rutina">
+        <SelectInput optionText="nombre" />
       </ReferenceInput>
-      <ReferenceInput source="IDDia" reference="dia">
-        <NumberInput source="id" />
+      <ReferenceInput source="IDDia" reference="dia" label="Día">
+        <SelectInput optionText="nombre" />
       </ReferenceInput>
-      <ReferenceInput source="IDEjercicio" reference="ejerciciorutina">
-        <NumberInput source="id" />
+      <ReferenceInput
+        source="IDEjercicio"
+        reference="ejerciciorutina"
+        label="Ejercicio"
+      >
+        <SelectInput optionText="nombre" />
       </ReferenceInput>
       <NumberInput source="Repeticiones" />
       <NumberInput source="Series" />
     </SimpleForm>
   </Create>
+);
+
+export const DiasRutinaFilter = (props) => (
+  <Filter {...props}>
+    <TextInput label="Search" source="q" alwaysOn />
+    <ReferenceInput label="User" source="userId" reference="users" allowEmpty>
+      <SelectInput optionText="name" />
+    </ReferenceInput>
+  </Filter>
 );

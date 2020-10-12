@@ -8,6 +8,7 @@ import {
   SimpleForm,
   TextInput,
   ReferenceField,
+  SelectInput,
   ReferenceInput,
   Create,
 } from "react-admin";
@@ -33,8 +34,12 @@ export const EjercicioRutinaEdit = (props) => (
   <Edit {...props}>
     <SimpleForm>
       <TextInput disabled source="id" />
-      <ReferenceInput source="idCategoria" reference="categoria">
-        <TextInput source="nombre" />
+      <ReferenceInput
+        source="idCategoria"
+        reference="categoria"
+        label="Categoría"
+      >
+        <SelectInput optionText="nombre" />
       </ReferenceInput>
       <TextInput source="nombre" />
     </SimpleForm>
@@ -44,8 +49,12 @@ export const EjercicioRutinaEdit = (props) => (
 export const EjercicioRutinaCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <ReferenceInput source="IDCategoria" reference="categoria">
-        <TextInput source="nombre" />
+      <ReferenceInput
+        source="IDCategoria"
+        reference="categoria"
+        label="Categoría"
+      >
+        <SelectInput optionText="nombre" />
       </ReferenceInput>
       <TextInput source="Nombre" />
     </SimpleForm>

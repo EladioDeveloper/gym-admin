@@ -17,7 +17,7 @@ export const SectorList = (props) => (
   <List {...props}>
     <Datagrid rowClick="edit">
       <TextField source="id" />
-      <ReferenceField source="idCiudad" reference="ciudad">
+      <ReferenceField source="idCiudad" reference="ciudad" label="Ciudad">
         <TextField source="nombre" />
       </ReferenceField>
       <TextField source="nombre" />

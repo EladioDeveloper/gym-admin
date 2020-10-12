@@ -8,6 +8,8 @@ import {
   SimpleForm,
   TextInput,
   ReferenceField,
+  SelectInput,
+  ReferenceInput,
   Create,
 } from "react-admin";
 
@@ -18,7 +20,7 @@ export const DireccionList = (props) => (
       <ReferenceField source="idSector" reference="sector" label="Sector">
         <TextField source="nombre" />
       </ReferenceField>
-      <TextField source="dir" />
+      <TextField source="dir" label="Direccion" />
       <EditButton />
     </Datagrid>
   </List>
@@ -31,7 +33,7 @@ export const DireccionEdit = (props) => (
       <ReferenceField source="idSector" reference="sector">
         <TextField source="nombre" />
       </ReferenceField>
-      <TextField source="direccion" />
+      <TextField source="dir" label="Direccion" />
     </SimpleForm>
   </Edit>
 );
@@ -39,10 +41,10 @@ export const DireccionEdit = (props) => (
 export const DireccionCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <ReferenceField source="IDSector" reference="sector">
-        <TextField source="nombre" />
-      </ReferenceField>
-      <TextField source="Dir" label="Direccion" />
+      <ReferenceInput source="IDSector" reference="sector">
+        <SelectInput optionText="nombre" />
+      </ReferenceInput>
+      <SelectInput source="Dir" label="Direccion" />
     </SimpleForm>
   </Create>
 );
